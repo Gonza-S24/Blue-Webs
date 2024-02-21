@@ -1,0 +1,359 @@
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #030564;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.padre1{
+    padding: 0px 0px 50px 0px;
+}
+
+header{
+    background-color: #08053d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px black;
+    flex-wrap: wrap;
+    padding: 0 50px;
+}
+
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    transition: 1s;
+    margin: 5px;
+    font-weight: bold;
+}
+.mostrarMenu,
+.esconderMenu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+#pagActual{
+    background: #fff;
+    color: #000000;
+    border-radius: 15%;
+}
+.mostrarMenu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrarMenu:hover,
+.esconderMenu:hover{
+    color:#000000;
+    background-color: #fff;
+    border-radius: 15%;
+   
+}
+
+#check{
+    display: none;
+}
+
+#logoBody{
+    background-image: url(imagenes/LogoBW.png);
+    width: 110px;
+    height: 90px;
+    background-color: #08053d;
+    background-size: 190%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20%;
+  
+    
+}
+
+.pagActual{
+background-color: #ffffff;
+color: #000000;
+border: solid 2px #000000;
+}
+
+.contenedorI{
+padding: 10%;
+background-image: url(imagenes/FondoBodyPral.png);
+background-repeat: no-repeat;
+background-size: 100%;
+background-position: center;
+margin-left: 10%;
+margin-right: 10%;
+padding-bottom: 15%;
+border: solid 1px black;
+text-align: left;
+}
+
+.contenedorI h2{
+  transform: translateX(-90px) translateY(-120px);
+  font-size: 30px;
+}
+.contenedorI h3{
+ transform: translateX(-90px);
+ font-size: 20px;
+}
+
+.contactos{
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(90px);
+}
+
+.contacto{
+  width: 150px;
+  height: 200px;
+  background-color: #c9c6c6;
+  border-radius: 10%;
+  text-align: center;
+  font-weight:900;
+  transition: 1s;
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.iconContac{
+  width: 50%;
+  height: 40%;
+  margin-bottom: 30%;
+}
+
+#whatsapp:hover{
+  background-color: #00bb2d;
+  color: #fff;
+}
+
+#facebook:hover{
+  background-color: #3b5998;
+  color: #fff;
+}
+
+#instagram{
+  background: #c9c6c6 ;
+  position: relative;
+  background-size: 1px 100px;
+  transition: all 1s;
+  overflow: hidden;
+}
+#instagram::before{
+  content: "";
+  background: radial-gradient(circle at top right, #8134af, #f58529 );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Asegurarse de que esté detrás del contenido */
+  transition: opacity 1s;
+  opacity: 0; /* Inicialmente transparente */
+}
+#instagram div{
+  position: relative;
+  z-index: 1;
+}
+#instagram:hover{
+  color: #fff;
+}
+#instagram:hover::before{
+  opacity: 1;
+  
+}
+#gmail img{
+  width: 70%;
+  height: 60%;
+}
+#Gmail{
+  transform: translateY(-16px);
+}
+#gmail:hover{
+  background-color: #dd0404;
+  color: #fff;
+}
+
+.contenedor-slider{
+   width: 100%;
+    height: 20%;
+    background-color: #18056d;
+  position: relative;
+ 
+}
+
+.slider {
+    width: 500px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    left: 30%;
+    background-color: #18056d;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .slider-content {
+ width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 1s ease-in-out;
+    font-size: 30px;
+    text-align:center;
+    
+  }
+  
+  .slider-item {
+    width: 500px;
+    height: 50px;
+    flex-shrink: 0;
+    transform: translateY(40px);
+  }
+
+  .buttonSlider{
+    padding: 25px;
+    height: 39px;
+    border-radius: 100%;
+    background-color: #18056dfa;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    border: solid 2px black;
+  }
+.buttonSlider:hover{
+    background-color: #fff;
+}
+#prevButton{
+    background-image: url(imagenes/flechaIz.png);
+   transform: translateY(120px) translateX(260px);
+  
+}
+#nextButton{
+    background-image: url(imagenes/flechaDe.png);
+    transform: translateY(-125px) translateX(970px);
+}
+
+footer{
+  position: absolute;
+  border: solid 1px black;
+  background-color: #0a027e;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 10px;
+}
+
+@media(max-width: 768px){
+  .contenedorI h2{
+    font-size: 18px;
+    transform: translateX(-40px) translateY(-50px);
+  }
+  .contenedorI h3{
+    font-size: 12px;
+    transform: translateX(-40px);
+  }
+
+  .contactos{
+    transform: translateY(30px);
+  }
+  .contacto{
+    width: 20%;
+    height: 100px;
+    font-size: 10px;
+  }
+  .iconContac{
+    margin: 6px;
+  }
+  #whatsapp{
+    background-color: #00bb2d;
+    color: #fff;
+  } 
+  #facebook{
+    background-color: #3b5998;
+    color: #fff;
+  }
+  #Gmail{
+    transform: translateY(-6px);
+  }
+  #gmail{
+    background-color: #dd0404;
+    color: #fff;
+  }
+  #instagram{
+    background: radial-gradient(circle at top right, #8134af, #f58529 );
+    color: #fff;
+  }
+
+  .mostrarMenu,
+  .esconderMenu{
+        display: block;
+  }
+  .menu{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #000030;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 1s;
+  }
+  .menu a{
+        display: block;
+        padding: 20px;
+  }
+  .esconderMenu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+  }
+  #check:checked ~ .menu{
+        right: 0;
+  }
+
+  .contenedor-slider {
+        width: 100%;
+        height: auto;
+       
+  }
+  .slider {
+        width: 50%;
+        transform: translateX(-15%);
+        margin: 15px;
+  }
+  .slider-content {
+        font-size: 20px;
+  }
+  .slider-item {
+        width: 100%;
+        transform: translateY(120%);
+        text-align: center;
+  }
+  .buttonSlider {
+        display: block; /* Mostrar los botones en pantallas pequeñas */
+        position: relative;
+        top: 50%;
+      
+        z-index: 1;
+  }
+  #prevButton {
+        transform: translateX(30px) translateY(145px);
+  }
+  #nextButton {
+        right: 10px;
+        transform: rotate(0deg) translateX(555px) translateY(-150px);
+  }
+
+}
+

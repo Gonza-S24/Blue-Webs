@@ -1,0 +1,91 @@
+body{
+    align-content: center;
+}
+
+.servicios{
+    display: flex;
+    padding: 50px 100px;
+    background-color: #030564;
+    margin: 0 70px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.servicio{
+    background-color: #030570;
+    width: 420px;
+    height: 450px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #e0730c;
+}
+
+.servicio img{
+    width: 35%;
+    height: 35%;
+    margin: 25px;
+}
+
+.servicio h3{
+    font-size: 28px;
+    transform: translateY(30px);
+}
+
+.servicio p{
+    font-size: 22px;
+    margin: 20px;
+    transform: translateY(-30px);
+}
+
+#mantenimiento h3{
+    transform: translateX(190px) translateY(-220px);
+}
+#mantenimiento p{
+    transform: translateY(-190px);
+}
+
+@media(max-width: 768px){
+    .servicios{
+        width: auto;
+        height: auto;
+        margin: 20px;
+    }
+
+    .servicio{
+        width: 100%;
+        height: 300px;
+    }
+
+    .servicio img{
+        transform: translateX(-20px) translateY(-20px);
+        height: 150px;
+        width: 150px;
+    }
+
+    .servicio h3{
+        font-size: 20px; 
+    }
+    .servicio p{
+        font-size: 14px;
+    }
+
+    #personalizar h3{
+        transform: translateX(190px) translateY(-180px);
+    }
+    #personalizar p{
+        transform: translateY(-150px);
+    }
+
+    #responsive p {
+        transform: translateY(-70px);
+    }
+
+    #mantenimiento h3{
+        transform: translateX(180px) translateY(-180px);
+    }
+    #mantenimiento p{
+        transform: translateY(-170px);
+    }
+
+}

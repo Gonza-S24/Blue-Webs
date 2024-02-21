@@ -1,0 +1,31 @@
+body{
+    align-items: center;
+}
+.conocenos{
+    width: 90%;
+    height: 700px;
+    background-color: black;
+    display: flex;
+    margin: 30px 70px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.conocenos img{
+    width: 30%;
+    height: 50%;
+    margin: 50px 70px;
+}
+
+.conocenos h1{
+    transform: translateX(-100px);
+    font-size: 58px;
+}
+
+#p1{
+    transform: translateX(550px) translateY(-320px);
+}
+#p2{
+    margin: 20px;
+    transform: translateY(-220px);
+}
