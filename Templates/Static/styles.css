@@ -1,7 +1,7 @@
 body{
     font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: #030564;
-    color: white;
+    background-color: #ffffff;
+    color: #000000;
     margin: 0;
     padding: 0;
 }
@@ -39,7 +39,7 @@ header{
 #pagActual{
     background: #fff;
     color: #000000;
-    border-radius: 15%;
+    border-radius: 8px;
 }
 .mostrarMenu{
     order: 1;
@@ -50,7 +50,7 @@ header{
 .esconderMenu:hover{
     color:#000000;
     background-color: #fff;
-    border-radius: 15%;
+    border-radius: 8px;
    
 }
 
@@ -74,7 +74,7 @@ header{
 .pagActual{
 background-color: #ffffff;
 color: #000000;
-border: solid 2px #000000;
+border: solid 8px #000000;
 }
 
 .contenedorI{
@@ -93,10 +93,12 @@ text-align: left;
 .contenedorI h2{
   transform: translateX(-90px) translateY(-120px);
   font-size: 30px;
+  color: #ffffff;
 }
 .contenedorI h3{
  transform: translateX(-90px);
  font-size: 20px;
+  color: #ffffff;
 }
 
 .contactos{
@@ -131,10 +133,6 @@ text-align: left;
   color: #fff;
 }
 
-#facebook:hover{
-  background-color: #3b5998;
-  color: #fff;
-}
 
 #instagram{
   background: #c9c6c6 ;
@@ -181,7 +179,7 @@ text-align: left;
 .contenedor-slider{
    width: 100%;
     height: 20%;
-    background-color: #18056d;
+    background-color: #ffffff;
   position: relative;
  
 }
@@ -192,9 +190,11 @@ text-align: left;
     overflow: hidden;
     position: relative;
     left: 30%;
-    background-color: #18056d;
+    background-color: #bebebe;
     display: flex;
     justify-content: center;
+    border-radius: 20px;
+    border: solid 3px #000000;
     
   }
   
@@ -219,7 +219,7 @@ text-align: left;
     padding: 25px;
     height: 39px;
     border-radius: 100%;
-    background-color: #18056dfa;
+    background-color: #fffffffa;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -228,7 +228,7 @@ text-align: left;
     border: solid 2px black;
   }
 .buttonSlider:hover{
-    background-color: #fff;
+    background-color: #b7b7b7;
 }
 #prevButton{
     background-image: url(imagenes/flechaIz.png);
@@ -252,108 +252,351 @@ footer{
   font-size: 10px;
 }
 
-@media(max-width: 768px){
-  .contenedorI h2{
-    font-size: 18px;
-    transform: translateX(-40px) translateY(-50px);
+/* ----------------- MOBILE FIXES (REEMPLAZAR MEDIA QUERY ANTERIOR) ----------------- */
+@media (max-width: 768px) {
+
+  /* seguridad: evitar desbordes y hacer box-sizing global */
+  html, body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: #ffffff; /* asegura fondo uniforme si aparece la "barra azul" */
   }
-  .contenedorI h3{
-    font-size: 12px;
-    transform: translateX(-40px);
+  *, *::before, *::after { box-sizing: border-box; }
+
+  /* ===== header / logo / menu ===== */
+  header { padding: 10px 14px; }
+  #logoBody{
+    width: 72px;
+    height: 58px;
+    background-size: contain !important;
+    background-position: center !important;
+  }
+  .mostrarMenu, .esconderMenu{
+    display: block;
+    font-size: 28px;
+    line-height: 1;
   }
 
-  .contactos{
-    transform: translateY(30px);
-  }
-  .contacto{
-    width: 20%;
-    height: 100px;
-    font-size: 10px;
-  }
-  .iconContac{
-    margin: 6px;
-  }
-  #whatsapp{
-    background-color: #00bb2d;
-    color: #fff;
-  } 
-  #facebook{
-    background-color: #3b5998;
-    color: #fff;
-  }
-  #Gmail{
-    transform: translateY(-6px);
-  }
-  #gmail{
-    background-color: #dd0404;
-    color: #fff;
-  }
-  #instagram{
-    background: radial-gradient(circle at top right, #8134af, #f58529 );
-    color: #fff;
-  }
-
-  .mostrarMenu,
-  .esconderMenu{
-        display: block;
-  }
   .menu{
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: #000030;
-        right: -100%;
-        top: 0;
-        text-align: center;
-        padding: 100px 0px;
-        z-index: 100;
-        transition: 1s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000030;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 84px 12px;
+    z-index: 100;
+    transition: right 0.35s ease;
+    overflow-y: auto;
+    box-sizing: border-box;
   }
   .menu a{
-        display: block;
-        padding: 20px;
+    display: block;
+    padding: 14px 8px;
+    font-size: 18px;
+    margin: 6px 0;
+    word-break: break-word;
   }
   .esconderMenu{
-        position: absolute;
-        top: 40px;
-        right: 40px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 30px;
   }
-  #check:checked ~ .menu{
-        right: 0;
-  }
+  #check:checked ~ .menu{ right: 0; }
 
+  /* ===== contenedor principal / fondo ===== */
+  .contenedorI {
+    margin: 4% auto;
+    padding: 18% 6% 12% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    text-align: center;
+    max-width: calc(100% - 8%);
+    overflow: hidden;
+  }
+  .contenedorI h2,
+  .contenedorI h3 {
+    transform: none !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 0 0 8px 0;
+    color: #fff;
+  }
+  .contenedorI h2 { font-size: 20px !important; line-height: 1.15; }
+  .contenedorI h3 { font-size: 14px !important; }
+
+  /* ===== contactos ===== */
+  .contactos {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    transform: none !important;
+    margin-top: 16px;
+  }
+  .contacto {
+    width: 92% !important;
+    max-width: 420px;
+    height: auto !important;
+    padding: 14px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size: 15px;
+  }
+  .iconContac {
+    width: 45%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  #Gmail { transform: none !important; }
+
+  /* ===== slider ===== */
   .contenedor-slider {
-        width: 100%;
-        height: auto;
-       
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
   }
   .slider {
-        width: 50%;
-        transform: translateX(-15%);
-        margin: 15px;
+    width: 92% !important;
+    max-width: 720px;
+    margin: 0 auto;
+    left: 0 !important;
+    position: relative !important; /* necesario para los botones absolute */
+    height: auto !important;
+    padding: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
   }
   .slider-content {
-        font-size: 20px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease-in-out;
   }
   .slider-item {
-        width: 100%;
-        transform: translateY(120%);
-        text-align: center;
+    min-width: 100% !important;    /* cada slide ocupa 100% del contenedor */
+    box-sizing: border-box;
+    padding: 14px;
+    transform: none !important;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.2;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
+
+  /* ===== botones del slider ===== */
   .buttonSlider {
-        display: block; /* Mostrar los botones en pantallas pequeñas */
-        position: relative;
-        top: 50%;
-      
-        z-index: 1;
+    position: absolute !important;
+    top: 50%;
+    transform: translateY(-50%) !important;
+    z-index: 20;
+    padding: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-size: 20px 20px !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
   }
+  #prevButton { left: 8px; }
+  #nextButton { right: 8px; }
+
+  /* ===== footer ===== */
+  footer {
+    position: static !important;
+    width: 100% !important;
+    left: 0;
+    margin-top: 20px;
+    box-sizing: border-box;
+  }
+
+  /* neutralizar cualquier transform residual que rompa el layout */
+  .contenedorI h2, .contenedorI h3, .contactos, .contacto, .slider-item, .buttonSlider {
+    transform: none !important;
+  }
+
+  /* asegurar que imágenes y elementos no excedan el ancho */
+  img, .iconContac, .slider, .menu, .contacto, .contenedorI { max-width: 100%; height: auto; }
+
+}
+@media (max-width: 768px) {
+
+  /* ================= REDES SOCIALES ================= */
+  .contacto {
+    width: 85% !important;      /* antes 92% */
+    max-width: 280px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  .iconContac {
+    width: 35% !important;      /* iconos más chicos */
+    margin-bottom: 8px;
+  }
+
+  /* ================= SLIDER ================= */
+  .slider {
+    width: 85% !important;      /* menos ancho */
+    max-width: 360px !important;
+    height: 220px !important;   /* MÁS ALTO */
+    padding: 16px !important;
+  }
+
+  .slider-content {
+    align-items: center;        /* centra verticalmente */
+  }
+
+  .slider-item {
+    min-width: 100% !important;
+    height: auto !important;
+    padding: 16px !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ================= BOTONES SLIDER ================= */
   #prevButton {
-        transform: translateX(30px) translateY(145px);
+    left: -6px;   /* más pegados al slider */
   }
+
   #nextButton {
-        right: 10px;
-        transform: rotate(0deg) translateX(555px) translateY(-150px);
+    right: -6px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* ================= SLIDER ================= */
+
+  .slider {
+    width: 85% !important;
+    max-width: 360px !important;
+    height: 260px !important;   /* más alto */
+    padding: 12px !important;
+    overflow-x: hidden;
+    overflow-y: visible;        /* evita que el texto se corte */
+  }
+
+  .slider-content {
+    height: 100%;
+    align-items: stretch;
+  }
+
+  .slider-item {
+    min-width: 100% !important;
+    height: 100% !important;
+    padding: 18px !important;
+
+    /* CENTRADO REAL */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    text-align: center;
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+
+    transform: none !important;
+    box-sizing: border-box;
+  }
+
+  /* ================= BOTONES SLIDER ================= */
+  .buttonSlider {
+    top: 50%;
+    transform: translateY(-50%) !important;
+  }
+
+  /* ================= REDES SOCIALES (COLORES MOBILE) ================= */
+
+  /* WhatsApp */
+  #whatsapp {
+    background-color: #00bb2d !important;
+    color: #ffffff !important;
+  }
+
+  /* Instagram */
+  #instagram {
+    background: radial-gradient(circle at top right, #8134af, #f58529 ) !important;
+    color: #ffffff !important;
+  }
+
+  /* Gmail */
+  #gmail {
+    background-color: #dd0404 !important;
+    color: #ffffff !important;
+  }
+
+  /* asegurar que el texto quede arriba del fondo */
+  #instagram div {
+    position: relative;
+    z-index: 1;
   }
 
 }
+@media (max-width: 768px) {
 
+  /* ===== ARREGLO DEFINITIVO DE CENTRADO SLIDER ===== */
+
+  .slider {
+    padding: 0 !important;          /* clave */
+  }
+
+  .slider-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .slider-item {
+    padding: 16px !important;       /* padding interno, no externo */
+    margin: 0 !important;
+    left: 0 !important;
+
+    /* centrado real */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+}
+@media (max-width: 768px) {
+
+  /* ===== ELIMINAR DESPLAZAMIENTO LATERAL ===== */
+  .slider {
+    left: 0 !important;          /* ESTA ES LA CLAVE */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
+  }
+
+  /* ===== CADA SLIDE OCUPA EXACTAMENTE EL 100% ===== */
+  .slider-item {
+    width: 100% !important;      /* pisa los 500px */
+    min-width: 100% !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+
+    padding: 18px !important;
+    transform: none !important;
+  }
+
+  .slider-content {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+}
