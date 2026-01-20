@@ -5,20 +5,20 @@ body{
 .servicios{
     display: flex;
     padding: 50px 100px;
-    background-color: #030564;
+    background-color: #e6e6e6;
     margin: 0 70px;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .servicio{
-    background-color: #030570;
+    background-color: #8284ff;
     width: 420px;
     height: 450px;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
-    color: #e0730c;
+    color: #000000;
 }
 
 .servicio img{
@@ -45,47 +45,84 @@ body{
     transform: translateY(-190px);
 }
 
-@media(max-width: 768px){
-    .servicios{
-        width: auto;
+/* Responsive para pantallas medianas */
+@media (max-width: 1200px) {
+    .servicios {
+        padding: 50px 50px;
+        margin: 0 40px;
+        justify-content: center;
+    }
+
+    .servicio {
+        width: 350px;
+        height: auto;
+        margin: 15px;
+    }
+
+    .servicio img {
+        width: 40%;
         height: auto;
         margin: 20px;
     }
 
-    .servicio{
+    .servicio h3 {
+        font-size: 24px;
+    }
+
+    .servicio p {
+        font-size: 18px;
+        margin: 15px;
+    }
+
+    #mantenimiento h3 {
+        transform: translateX(0) translateY(-50px);
+    }
+
+    #mantenimiento p {
+        transform: translateY(-30px);
+    }
+}
+
+/* Responsive para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .servicios {
+        flex-direction: column;
+        padding: 20px;
+        margin: 0 10px;
+    }
+
+    .servicio {
         width: 100%;
-        height: 300px;
+        max-width: 400px;
+        height: auto;
+        margin: 10px auto;
     }
 
-    .servicio img{
-        transform: translateX(-20px) translateY(-20px);
-        height: 150px;
-        width: 150px;
+    .servicio img {
+        width: 50%;
+        height: auto;
+        margin: 15px auto;
+        display: block;
     }
 
-    .servicio h3{
-        font-size: 20px; 
-    }
-    .servicio p{
-        font-size: 14px;
-    }
-
-    #personalizar h3{
-        transform: translateX(190px) translateY(-180px);
-    }
-    #personalizar p{
-        transform: translateY(-150px);
+    .servicio h3 {
+        font-size: 22px;
+        transform: translateY(0);
+        text-align: center;
     }
 
-    #responsive p {
-        transform: translateY(-70px);
+    .servicio p {
+        font-size: 16px;
+        margin: 10px;
+        transform: translateY(0);
+        text-align: center;
     }
 
-    #mantenimiento h3{
-        transform: translateX(180px) translateY(-180px);
-    }
-    #mantenimiento p{
-        transform: translateY(-170px);
+    #mantenimiento h3 {
+        transform: translateY(0);
     }
 
+    #mantenimiento p {
+        transform: translateY(0);
+    }
 }
